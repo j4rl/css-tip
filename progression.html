@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Progression för CSS Tips med två tips per vecka från grunder till avancerad CSS.">
+    <title>Progression - CSS Tips</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="page-header">
+      <nav class="topbar" aria-label="Huvudnavigering">
+        <a class="brand" href="index.html" aria-label="CSS Tips startsida">
+          <span class="brand-mark">CSS</span>
+          <span>Tips</span>
+        </a>
+        <div class="topbar-links">
+          <a href="tips.html">Alla tips</a>
+          <a href="progression.html" aria-current="page">Progression</a>
+          <a href="lab.html">Lab</a>
+          <a href="https://github.com/j4rl/css-tips" rel="noreferrer">Källa</a>
+        </div>
+        <div class="theme-switcher" aria-label="Välj tema">
+          <button type="button" data-theme-choice="auto">Auto</button>
+          <button type="button" data-theme-choice="light">Ljust</button>
+          <button type="button" data-theme-choice="dark">Mörkt</button>
+        </div>
+      </nav>
+      <div class="page-title">
+        <p class="eyebrow">Progression</p>
+        <h1>Två CSS-tips per vecka</h1>
+        <p>Materialet börjar med säkra grundmönster och går stegvis mot modern, avancerad och experimentell CSS.</p>
+      </div>
+    </header>
+
+    <main>
+      <section class="progression" aria-labelledby="progression-title">
+        <div class="section-heading">
+          <p class="eyebrow">40 veckor</p>
+          <h2 id="progression-title">Från box model till view transitions</h2>
+        </div>
+        <div class="level-legend" id="level-summary"></div>
+        <div class="week-list" id="week-list"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p><a href="tips.html">Gå till katalogen</a></p>
+    </footer>
+
+    <script src="data/tips-data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

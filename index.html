@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="CSS Tips samlar korta, praktiska CSS-exempel från grundläggande CSS till cutting-edge tekniker.">
+    <title>CSS Tips</title>
+    <link rel="preload" as="image" href="assets/css-workspace.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header site-header--home" id="top">
+      <nav class="topbar" aria-label="Huvudnavigering">
+        <a class="brand" href="index.html" aria-label="CSS Tips startsida">
+          <span class="brand-mark">CSS</span>
+          <span>Tips</span>
+        </a>
+        <div class="topbar-links">
+          <a href="tips.html">Alla tips</a>
+          <a href="progression.html">Progression</a>
+          <a href="lab.html">Lab</a>
+          <a href="https://github.com/j4rl/css-tips" rel="noreferrer">Källa</a>
+        </div>
+        <div class="theme-switcher" aria-label="Välj tema">
+          <button type="button" data-theme-choice="auto">Auto</button>
+          <button type="button" data-theme-choice="light">Ljust</button>
+          <button type="button" data-theme-choice="dark">Mörkt</button>
+        </div>
+      </nav>
+
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-media" aria-hidden="true"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Från grunder till modern CSS</p>
+          <h1 id="page-title">CSS Tips</h1>
+          <p class="hero-copy">
+            En strukturerad tipsbank för undervisning, repetition och egna projekt.
+            Börja med säkra grundmönster och följ progressionen mot avancerade tekniker.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-link" href="progression.html">Starta progressionen</a>
+            <a class="secondary-link" href="tips.html">Bläddra bland tips</a>
+          </div>
+          <dl class="stats" aria-label="Innehåll">
+            <div>
+              <dt id="tip-count">0</dt>
+              <dd>tips</dd>
+            </div>
+            <div>
+              <dt id="category-count">0</dt>
+              <dd>kategorier</dd>
+            </div>
+            <div>
+              <dt id="favorite-count">0</dt>
+              <dd>sparade</dd>
+            </div>
+          </dl>
+        </div>
+      </section>
+    </header>
+
+    <main>
+      <section class="tip-of-day" aria-labelledby="daily-title">
+        <div class="section-heading">
+          <p class="eyebrow">Dagens fokus</p>
+          <h2 id="daily-title">Ett tips att prova direkt</h2>
+        </div>
+        <article class="daily-tip" id="daily-tip"></article>
+      </section>
+
+      <section class="overview-links" aria-labelledby="overview-title">
+        <div class="section-heading">
+          <p class="eyebrow">Undersidor</p>
+          <h2 id="overview-title">Välj väg genom materialet</h2>
+        </div>
+        <div class="feature-grid">
+          <a class="feature-card" href="tips.html">
+            <span>01</span>
+            <h3>Alla tips</h3>
+            <p>Sök, filtrera på kategori och nivå, kopiera CSS och öppna tipsens detaljsidor.</p>
+          </a>
+          <a class="feature-card" href="progression.html">
+            <span>02</span>
+            <h3>Progression</h3>
+            <p>Två tips per vecka, sorterade från grundläggande till avancerat och experimentellt.</p>
+          </a>
+          <a class="feature-card" href="lab.html">
+            <span>03</span>
+            <h3>Lab</h3>
+            <p>Testa ett responsivt gridmönster och kopiera den CSS som genereras.</p>
+          </a>
+        </div>
+      </section>
+
+      <section class="progression-preview" aria-labelledby="preview-title">
+        <div class="section-heading">
+          <p class="eyebrow">Första stegen</p>
+          <h2 id="preview-title">Progressionen börjar enkelt</h2>
+        </div>
+        <div class="week-list week-list--compact" id="home-progression"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Byggd som en statisk sida. Innehållet är inspirerat av <a href="https://github.com/j4rl/css-tips" rel="noreferrer">j4rl/css-tips</a>.</p>
+    </footer>
+
+    <script src="data/tips-data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Detaljsida för ett CSS-tips.">
+    <title>Tips - CSS Tips</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="page-header">
+      <nav class="topbar" aria-label="Huvudnavigering">
+        <a class="brand" href="index.html" aria-label="CSS Tips startsida">
+          <span class="brand-mark">CSS</span>
+          <span>Tips</span>
+        </a>
+        <div class="topbar-links">
+          <a href="tips.html">Alla tips</a>
+          <a href="progression.html">Progression</a>
+          <a href="lab.html">Lab</a>
+          <a href="https://github.com/j4rl/css-tips" rel="noreferrer">Källa</a>
+        </div>
+        <div class="theme-switcher" aria-label="Välj tema">
+          <button type="button" data-theme-choice="auto">Auto</button>
+          <button type="button" data-theme-choice="light">Ljust</button>
+          <button type="button" data-theme-choice="dark">Mörkt</button>
+        </div>
+      </nav>
+      <div class="page-title page-title--compact">
+        <p class="eyebrow">Detalj</p>
+        <h1 id="tip-detail-title">CSS-tips</h1>
+      </div>
+    </header>
+
+    <main>
+      <article class="tip-detail" id="tip-detail"></article>
+    </main>
+
+    <footer class="site-footer">
+      <p><a href="tips.html">Tillbaka till alla tips</a></p>
+    </footer>
+
+    <script src="data/tips-data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

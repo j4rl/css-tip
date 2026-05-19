@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="sv">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Sökbar katalog med CSS-tips, nivåer, supportnotiser och kodexempel.">
+    <title>Alla tips - CSS Tips</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="page-header">
+      <nav class="topbar" aria-label="Huvudnavigering">
+        <a class="brand" href="index.html" aria-label="CSS Tips startsida">
+          <span class="brand-mark">CSS</span>
+          <span>Tips</span>
+        </a>
+        <div class="topbar-links">
+          <a href="tips.html" aria-current="page">Alla tips</a>
+          <a href="progression.html">Progression</a>
+          <a href="lab.html">Lab</a>
+          <a href="https://github.com/j4rl/css-tips" rel="noreferrer">Källa</a>
+        </div>
+        <div class="theme-switcher" aria-label="Välj tema">
+          <button type="button" data-theme-choice="auto">Auto</button>
+          <button type="button" data-theme-choice="light">Ljust</button>
+          <button type="button" data-theme-choice="dark">Mörkt</button>
+        </div>
+      </nav>
+      <div class="page-title">
+        <p class="eyebrow">Katalog</p>
+        <h1>Alla CSS-tips</h1>
+        <p>Sök i hela materialet eller filtrera på nivå och kategori. Tipsen är sorterade efter progression.</p>
+      </div>
+    </header>
+
+    <main>
+      <section class="catalog" id="tips" aria-labelledby="tips-title">
+        <div class="section-heading">
+          <p class="eyebrow">Sök och filtrera</p>
+          <h2 id="tips-title">Hitta rätt teknik</h2>
+        </div>
+
+        <form class="search-panel search-panel--page" role="search">
+          <label class="sr-only" for="tip-search">Sök bland CSS-tips</label>
+          <input id="tip-search" name="q" type="search" autocomplete="off" placeholder="Sök efter grid, :has, clamp, OKLCH...">
+          <button class="clear-button" type="button" hidden>Rensa</button>
+        </form>
+
+        <div class="filter-block">
+          <p>Kategori</p>
+          <div class="filters" id="category-filters" aria-label="Filtrera efter kategori"></div>
+        </div>
+        <div class="filter-block">
+          <p>Nivå</p>
+          <div class="filters" id="level-filters" aria-label="Filtrera efter nivå"></div>
+        </div>
+
+        <div class="toolbar" aria-live="polite">
+          <p id="result-summary"></p>
+          <button class="text-button" id="show-favorites" type="button" aria-pressed="false">Visa sparade</button>
+        </div>
+
+        <div class="tip-grid" id="tip-grid"></div>
+        <p class="empty-state" id="empty-state" hidden>Inga tips matchar sökningen.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p><a href="progression.html">Se hela progressionen</a></p>
+    </footer>
+
+    <template id="tip-card-template">
+      <article class="tip-card">
+        <div class="card-topline">
+          <span class="category-pill"></span>
+          <button class="favorite-button" type="button" aria-pressed="false">Spara</button>
+        </div>
+        <div class="meta-row">
+          <span class="order-pill"></span>
+          <span class="level-pill"></span>
+          <span class="status-pill"></span>
+          <span class="lesson-pill"></span>
+        </div>
+        <h3></h3>
+        <p></p>
+        <details>
+          <summary>Support, fallback och challenge</summary>
+          <div class="detail-grid">
+            <div>
+              <strong>Support</strong>
+              <span class="support-text"></span>
+            </div>
+            <div>
+              <strong>Challenge</strong>
+              <span class="challenge-text"></span>
+            </div>
+          </div>
+        </details>
+        <pre><code></code></pre>
+        <div class="card-actions">
+          <a class="primary-link detail-link" href="tip.html">Öppna</a>
+          <button class="copy-button" type="button">Kopiera</button>
+          <button class="lesson-button" type="button">Lektion</button>
+          <a class="codepen-link" href="https://codepen.io/pen/" rel="noreferrer">CodePen</a>
+        </div>
+      </article>
+    </template>
+
+    <script src="data/tips-data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
